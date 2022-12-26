@@ -172,7 +172,6 @@ def webhook_handler():
         print(f"REQUEST BODY: \n{body}")
         response = machine.advance(event)
         if response == False:
-            show_fsm()
             send_text_message(event.reply_token, "不知道做什麼的話 輸入 \"help\" 喔~")
 
     return "OK"
